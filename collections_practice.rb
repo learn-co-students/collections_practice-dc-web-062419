@@ -22,12 +22,13 @@ def reverse_array(array)
 end
 
 def kesha_maker(array)
-    array.each { |x| x.sub!(x[2], "$") }
+    array.each { |x| x[2] = "$" }
     array
 end
 
 def find_a(array)
     array.select { |x| x.start_with?("a") }
+    #array.find_all { |x| word[0] = "x" }
 end
 
 def sum_array(array)
@@ -38,13 +39,13 @@ def sum_array(array)
 end
 
 def add_s(array)
-    array.map { |x| 
-    if x != "feet"
-        x + "s"
+    array.map do |x| 
+    if array[1] == x
+        x
     else
-        "feet"
+        x + "s"
     end
-}
+  end
 end
 
 
